@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: ${dynamic.ip}
+        file-extension: yml
+        name: gateway.yml
+      discovery:
+        server-addr: ${dynamic.ip}
+        watch-delay: 80000
+        heart-beat-interval: 20000
+        heart-beat-timeout: 100000
+dynamic:
+  ip: 81.70.56.86:8848
